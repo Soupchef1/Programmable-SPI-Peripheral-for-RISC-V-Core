@@ -37,8 +37,7 @@
 
 Software only touches the memory mapped registers. TX words flow through the TX FIFO into `spi_core`; received words flow back through the RX FIFO. The core runs from the active copy of CONFIG, which reloads only while `transfer_done` is true. Chip selects and the interrupt line come straight from the register block, not from the core.
 
-![Uploading Screenshot 2026-10-10 125747 (1).png…]()
-
+<img width="872" height="410" alt="Screenshot 2026-10-10 125747 (1)" src="https://github.com/user-attachments/assets/81454de4-3dcc-4beb-a506-390dad86bda4" />
 
 - `interrupt_request_o` and `transfer_done` are combinational.
 
