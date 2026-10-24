@@ -264,4 +264,3 @@ With CPHA = 0 the first data bit is on MOSI while the core is idle, before the f
 | Full 32-bit accesses only | No byte enables; address bits [1:0] are ignored |
 | RX_DATA reads are destructive | Debug tools or speculative reads will pop data |
 
-## 6. Verification plan (for verif)
