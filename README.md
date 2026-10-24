@@ -1,22 +1,4 @@
 # Programmable-SPI-Peripheral-for-RISC-V-Core
-# Module spec & work plan — `programmable_spi`
-
-**Properties (set these on the database row)**
-
-| Property | Value |
-| --- | --- |
-| Tapeout | 3 |
-| Status | RTL (RTL written for all three modules; sanity testbench) |
-| Owner (design) | @ — Ryan Karami, Saahas Swaroop  |
-| Owner (verif) | @ — must be a different person from design |
-| Reviewer (lead/module manager) | @ |
-| Functional Group | `peripheral` |
-| RTL path | `src/rtl/programable_spi` |
-| TB path | `src/tb/verilog/sanity` |
-| Target date (lead/module manager) |  |
-| Branch Name | programmable_spi |
-
----
 
 ## 1. Purpose
 
@@ -55,7 +37,8 @@
 
 Software only touches the memory mapped registers. TX words flow through the TX FIFO into `spi_core`; received words flow back through the RX FIFO. The core runs from the active copy of CONFIG, which reloads only while `transfer_done` is true. Chip selects and the interrupt line come straight from the register block, not from the core.
 
-!Screenshot 2026-10-10 125747.png
+![Uploading Screenshot 2026-10-10 125747 (1).png…]()
+
 
 - `interrupt_request_o` and `transfer_done` are combinational.
 
